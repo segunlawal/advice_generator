@@ -1,11 +1,34 @@
-import "./App.css";
-import styled from "styled-components";
+import {
+  AppBox,
+  AdviceBox,
+  AdviceNo,
+  Advice,
+  DiceBox,
+  Dividers,
+} from "./Mystyles";
+import { ReactComponent as PatternDivider } from "./assets/pattern-divider-desktop.svg";
+import { ReactComponent as MobilePatternDivider } from "./assets/pattern-divider-mobile.svg";
+import { ReactComponent as IconDice } from "./assets/icon-dice.svg";
 
-const AppBox = styled.div`
-  background: hsl(217, 19%, 24%);
-`;
 function App() {
-  return <AppBox className="App">advice</AppBox>;
+  return (
+    <AppBox className="App">
+      <AdviceBox>
+        <AdviceNo>ADVICE #117</AdviceNo>
+        <Advice>
+          "The boy that went home isn't the boy that came back. Gibberish
+          placeholder advice from yours truly. Next level waffle."
+        </Advice>
+        <Dividers>
+          <PatternDivider />
+          <MobilePatternDivider />
+        </Dividers>
+        <DiceBox>
+          <IconDice />
+        </DiceBox>
+      </AdviceBox>
+    </AppBox>
+  );
 }
 
 export default App;
